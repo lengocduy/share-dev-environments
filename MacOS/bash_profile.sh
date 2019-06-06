@@ -103,6 +103,16 @@ function androidTools() {
   echo '==========================================='
 }
 
+androidCLIs() {
+  echo 'show list android emulators: $ emulators'
+  echo 'launch a specific emulator :  $startEmulator $emulator_name'
+}
+alias emulators="emulator -list-avds"
+startEmulator() {
+  emulator -avd $1
+}
+
+
 #==============================================#
 # Trigger other scripts run to activate tools
 #==============================================#
